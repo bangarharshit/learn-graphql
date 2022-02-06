@@ -1,3 +1,6 @@
+# Android course
+https://hasura.io/learn/graphql/android/introduction/
+
 # [hasura.io/learn](https://hasura.io/learn/)
 <a href="https://hacktoberfest.digitalocean.com/" alt="Hacktoberfest"><img src="https://badgen.net/badge/hacktoberfest/friendly/pink" /></a>
  [![hasura.io/learn website](https://img.shields.io/badge/docs-hasura.io-blue.svg)](https://hasura.io/learn/)
