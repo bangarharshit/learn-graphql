@@ -2,6 +2,7 @@ package com.hasura.todo.Todo.ui.todos
 
 import android.content.Context.INPUT_METHOD_SERVICE
 import android.os.Bundle
+import android.util.Log
 import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
@@ -28,7 +29,8 @@ class TodosFragment : Fragment(), TaskFragment.FragmentListener {
 
         val input: EditText = root.title_text
         input.setOnEditorActionListener { v, actionId, event ->
-            if ((event != null && (event.getKeyCode() == KeyEvent.KEYCODE_ENTER)) || (actionId == EditorInfo.IME_ACTION_DONE)) {
+            Log.i("harshit", "coming here")
+            if ((event != null && (event.getKeyCode() == KeyEvent.KEYCODE_ENTER)) || (actionId == EditorInfo.IME_ACTION_NEXT)) {
 
                 // Add Todo
                 if ( input.editableText.toString() != ""){

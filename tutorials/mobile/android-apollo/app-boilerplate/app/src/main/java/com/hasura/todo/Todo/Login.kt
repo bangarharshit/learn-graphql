@@ -15,6 +15,7 @@ import com.auth0.android.callback.BaseCallback
 import com.auth0.android.provider.AuthCallback
 import com.auth0.android.provider.WebAuthProvider
 import com.auth0.android.result.Credentials
+import com.hasura.todo.Todo.network.Network
 
 class Login : AppCompatActivity(){
 
@@ -62,6 +63,8 @@ class Login : AppCompatActivity(){
         // Obtain the existing credentials and move to the next activity
         credentialsManager.getCredentials(object : BaseCallback<Credentials, CredentialsManagerException> {
             override fun onSuccess(credentials: Credentials) {
+                val network = Network()
+                network.setApolloClient(credentials.idToken!!, application)
                 showNextActivity()
             }
 
@@ -109,7 +112,8 @@ class Login : AppCompatActivity(){
         }
 
         override fun onSuccess(credentials: Credentials) {
-
+            val network = Network()
+            network.setApolloClient(credentials.idToken!!, application)
             credentialsManager?.saveCredentials(credentials)
             showNextActivity()
         }

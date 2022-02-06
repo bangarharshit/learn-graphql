@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 // Apollo
 // This must go AFTER com.android.application plugin and BEFORE Kotlin plugin
-apply plugin: 'com.apollographql.android'
+apply plugin: 'com.apollographql.apollo'
 
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
